@@ -9,12 +9,6 @@ def hello_world():
     return render_template("index.html")
 
 
-
-@app.route('/login')
-def login():
-    return render_template("login.html")
-
-
 # Rota index, seleção e leitura da base de dados.
 @app.route('/file', methods=["POST"])
 def file():
@@ -28,7 +22,7 @@ def file():
     X = documents.message
     y = documents.label
 
-    return render_template("test.html")
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
