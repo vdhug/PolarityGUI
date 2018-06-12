@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Informações
+{% endblock %}
+
+{% block body %}
+     <table class="table table-striped">
+     <thead>
+        <th>Classe</th>
+        <th>Quantidade de documentos</th>
+     </thead>
+      <tbody>
+            {% for class,total in info.items() %}
+            <tr>
+                <td>{{class}}</td>
+                <td>{{total}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
