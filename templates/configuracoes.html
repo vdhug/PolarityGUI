@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="col">
+    <form action="/configuracoes" method="post">
+        <div class="form-group">
+            <select class="form-control" name="abordagem">
+                <option selected="true" disabled="disabled">Abordagem</option>
+                <option value="tf">Term-Frequency</option>
+                <option value="tp">Term-Presence</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="algoritmo">
+                <option selected="true" disabled="disabled">Algoritmo</option>
+                <option value="nb">Naive Bayes</option>
+                <option value="rl">Regressão Logística</option>
+            </select>
+        </div>
+          <div class="form-group">
+            <legend>Métricas</legend>
+                 <input type="checkbox" name="precisao" value="precisao"/>Precisão<br />
+                 <input type="checkbox" name="revocacao" value="revocacao"/>Revocação<br />
+                 <input type="checkbox" name="f1" value="f1"/>F1<br />
+            </select>
+        </div>
+        <button class="btn btn-default" type="submit">Prosseguir</button>
+    </form>
+</div>
+
+{% endblock %}
